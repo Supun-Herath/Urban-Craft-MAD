@@ -1,16 +1,18 @@
-# urban_craft
+# Urban Craft - Flutter E-Commerce App
 
-A new Flutter project.
+Urban Craft is a Flutter framework based mobile app for selling Sri Lankan traditional handicrafts items. It includes user authentication, product browsing, shopping cart, and profile screens. The app follows Material Design, supports light/dark mode, and is responsive to screen size and orientation.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Login & Register screens with form validation  
+- Home screen with product list and detail view (master/detail)  
+- Shop Cart and Profile screens with bottom navigation  
+- Light and dark themes based on device settings  
+- Responsive layouts for portrait and landscape  
+- Reusable widgets and smooth animations  
 
-A few resources to get you started if this is your first Flutter project:
+## Technologies
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter & Dart  
+- Material Design  
+- Git version control
