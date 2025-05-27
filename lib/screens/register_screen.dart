@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'register_screen.dart';
-import 'home_screen.dart';
+import 'login_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +12,6 @@ class LoginScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Container(
             width: 300,
-            height: 520,
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -31,7 +29,6 @@ class LoginScreen extends StatelessWidget {
               children: [
                 // Logo
                 Image.asset('assets/images/logo.png', width: 110, height: 110),
-
                 const SizedBox(height: 12),
 
                 // Title
@@ -43,16 +40,25 @@ class LoginScreen extends StatelessWidget {
                     color: Colors.brown[800],
                   ),
                 ),
-
                 const SizedBox(height: 8),
 
                 // Subtitle
                 const Text(
-                  'Login to your account',
+                  'Create a new account',
                   style: TextStyle(fontSize: 16, color: Colors.black54),
                 ),
+                const SizedBox(height: 32),
 
-                const SizedBox(height: 45),
+                // Username
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Username',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
 
                 // Email
                 TextField(
@@ -63,7 +69,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 const SizedBox(height: 16),
 
                 // Password
@@ -76,9 +81,21 @@ class LoginScreen extends StatelessWidget {
                   ),
                   obscureText: true,
                 ),
+                const SizedBox(height: 16),
+
+                // Phone Number
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Phone Number',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                  ),
+                  keyboardType: TextInputType.phone,
+                ),
                 const SizedBox(height: 24),
 
-                // Login Button
+                // Register Button
                 SizedBox(
                   width: double.infinity,
                   height: 48,
@@ -93,34 +110,34 @@ class LoginScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) => const LoginScreen(),
                         ),
                       );
                     },
                     child: const Text(
-                      'Login',
+                      'Register',
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ),
                 ),
                 const SizedBox(height: 16),
 
-                // Register button
+                // Login link
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Don't have an account? "),
+                    const Text("Already have an account? "),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const RegisterScreen(),
+                            builder: (context) => const LoginScreen(),
                           ),
                         );
                       },
                       child: const Text(
-                        'Register here',
+                        'Login here',
                         style: TextStyle(color: Colors.blueAccent),
                       ),
                     ),

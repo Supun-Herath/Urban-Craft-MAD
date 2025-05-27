@@ -4,7 +4,7 @@ Urban Craft is a Flutter framework based mobile app for selling Sri Lankan tradi
 
 ## Features
 
-- Login & Register screens with form validation  
+- Login & Register screens 
 - Home screen with product list and detail view (master/detail)  
 - Shop Cart and Profile screens with bottom navigation  
 - Light and dark themes based on device settings  
@@ -15,4 +15,4 @@ Urban Craft is a Flutter framework based mobile app for selling Sri Lankan tradi
 
 - Flutter & Dart  
 - Material Design  
-- Git version control
+- Git for version control
