@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import '../widgets/main_scaffold.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MainScaffold(
-      currentIndex: 0,
-      body: Center(child: Text('Welcome to Urban Craft')),
+      currentIndex: 3,
+      body: Center(child: Text('User Dashboard')),
     );
   }
 }

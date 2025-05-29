@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'register_screen.dart';
-import 'home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -18,7 +16,7 @@ class LoginScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
                   blurRadius: 24,
@@ -31,7 +29,6 @@ class LoginScreen extends StatelessWidget {
               children: [
                 // Logo
                 Image.asset('assets/images/logo.png', width: 110, height: 110),
-
                 const SizedBox(height: 12),
 
                 // Title
@@ -43,7 +40,6 @@ class LoginScreen extends StatelessWidget {
                     color: Colors.brown[800],
                   ),
                 ),
-
                 const SizedBox(height: 8),
 
                 // Subtitle
@@ -51,7 +47,6 @@ class LoginScreen extends StatelessWidget {
                   'Login to your account',
                   style: TextStyle(fontSize: 16, color: Colors.black54),
                 ),
-
                 const SizedBox(height: 45),
 
                 // Email
@@ -63,7 +58,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 const SizedBox(height: 16),
 
                 // Password
@@ -90,12 +84,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
-                        ),
-                      );
+                      Navigator.pushReplacementNamed(context, '/home');
                     },
                     child: const Text(
                       'Login',
@@ -112,12 +101,7 @@ class LoginScreen extends StatelessWidget {
                     const Text("Don't have an account? "),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const RegisterScreen(),
-                          ),
-                        );
+                        Navigator.pushNamed(context, '/register');
                       },
                       child: const Text(
                         'Register here',

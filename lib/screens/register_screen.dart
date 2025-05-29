@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -16,7 +15,7 @@ class RegisterScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
                   blurRadius: 24,
@@ -107,12 +106,7 @@ class RegisterScreen extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const LoginScreen(),
-                        ),
-                      );
+                      Navigator.pushReplacementNamed(context, '/');
                     },
                     child: const Text(
                       'Register',
@@ -129,12 +123,7 @@ class RegisterScreen extends StatelessWidget {
                     const Text("Already have an account? "),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginScreen(),
-                          ),
-                        );
+                        Navigator.pushReplacementNamed(context, '/');
                       },
                       child: const Text(
                         'Login here',

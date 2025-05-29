@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import '../widgets/main_scaffold.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class CartScreen extends StatelessWidget {
+  const CartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MainScaffold(
-      currentIndex: 0,
-      body: Center(child: Text('Welcome to Urban Craft')),
+      currentIndex: 2,
+      body: Center(child: Text('Your cart is empty')),
     );
   }
 }
