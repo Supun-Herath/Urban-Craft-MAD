@@ -15,10 +15,14 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
       currentIndex: currentIndex,
       onTap: onTap,
-      selectedItemColor: const Color.fromARGB(255, 0, 0, 0),
+      selectedItemColor: Colors.black,
+      selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+      selectedIconTheme: const IconThemeData(size: 28),
+      unselectedIconTheme: const IconThemeData(size: 24),
+      showUnselectedLabels: true,
+      unselectedItemColor: Colors.grey,
       items: [
         BottomNavigationBarItem(
           icon: SvgPicture.asset(

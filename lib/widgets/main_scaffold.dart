@@ -33,7 +33,12 @@ class MainScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Urban Craft')),
+      appBar: AppBar(
+        title: Text(
+          'Urban Craft',
+          style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.bold),
+        ),
+      ),
       body: body,
       bottomNavigationBar: BottomNavBar(
         currentIndex: currentIndex,
