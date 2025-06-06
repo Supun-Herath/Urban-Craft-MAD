@@ -84,7 +84,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/home');
+                      Navigator.of(context).pushReplacementNamed('/home');
                     },
                     child: const Text(
                       'Login',
