@@ -33,6 +33,13 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  final List<Widget> pages = [
+    Center(child: Text('Home')), // ✅ Use simple widgets or real screens
+    Center(child: Text('Shop')),
+    Center(child: Text('Cart')),
+    Center(child: Text('Profile')),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
-      body: const Center(child: Text('Welcome to Urban Craft')),
+      body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
